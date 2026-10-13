@@ -34,12 +34,15 @@ namespace StarterAssets
 			}
 		}
 
-		public void OnJump(InputValue value)
-		{
-			JumpInput(value.isPressed);
-		}
+        public void OnJump(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                jump = true;
+            }
+        }
 
-		public void OnSprint(InputValue value)
+        public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
 		}
